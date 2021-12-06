@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="style2.css">
+	<link href="images/favicon.ico" rel="shortcut icon">
+	<script>
+		/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+
+var $ = function (id) {
+    return document.getElementById(id);
+}
+var resgisterList = function () {
+	var emailAddress = $("email_address").value;
+	var isValid = true;
+	
+	if (emailAddress == "") { 
+		$("email_address_error").firstChild.nodeValue = "This field is 	required.";
+		isValid = false;
+	} else {
+		$("email_address_error").firstChild.nodeValue = "";
+	} 
+
+	
+        
+         if ($("county").value == "") {
+		$("county_error").firstChild.nodeValue = "This field is required.";
+		isValid = false;
+	} else {
+		$("county_error").firstChild.nodeValue = "";
+	}  
+	
+	if (isValid) {
+		$("email_form1").submit(); 
+	}
+}
+
+window.onload = function () {
+    $("register").onclick = resgisterList;
+    $("email_address").focus();
+}
+	</script>
+	
+   <style>
+	*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  font-family: montserrat;
+}
+nav{
+  background: linear-gradient();
+  height: 76px;
+  width: 100%;
+}
+label.title{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+  font-family: cursive, sans serif
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active,a:hover{
+  background: linear-gradient(#3a6186,
+
+#89253e);
+  transition: .5s;
+}
+.c2{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#c1{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .c2{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #c1:checked ~ ul{
+    left: 0;
+  }
+}
+
+
+
+   </style>
+  </head>
+  <header>
+	<nav>
+      <input type="checkbox" id="c1">
+      <label for="check" class="c2">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="title">Healthy Lifestyle!!</label>
+      <ul>
+        <li><a   href="index.html">Home</a></li>
+        <li><a  href="recipes.html">recipes</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+		 <li><a class="active"  href="login.html">login</a></li>
+		
+      </ul>
+    </nav>
+	
+  </header>
+  <body>
+    <div class="center">
+      <h1>Login</h1>
+      <form action="index.html" method="post">
+        <div class="field">
+          <input id="email_address" type="text" required>
+          <span id="email_address_error">*</span>
+          <label>Email</label>
+        </div>
+        <div class="field">
+          <input id="county" type="password" required>
+          <span id="county_error">*</span>
+          <label>Password</label>
+        </div>
+        <div class="log">
+		<a href="adminlog.html">Admin Login</a>
+		</div>
+        <input type="submit" id="register" value="Login">
+        <div class="reg">
+          <a href="register.html">Register</a>
+        </div>
+      </form>
+    </div>
+	
+  </body>
+</html>
+  </body>
+</html>

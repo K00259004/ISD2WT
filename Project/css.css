@@ -1,0 +1,22 @@
+ #forms{display: block;
+			margin: 12% auto;
+			width: 55%;
+			background-color:#FDF5E6; }
+			#field p{font-style: italic;
+			color:#4B0082;}
+			#field li{font-style: italic;
+			color: #4B0082;}
+			#field h1{text-align: center;
+			color: #00CED1;}
+.grid-container1{width: 100%; margin: auto; display: grid;
+				grid-template-columns: auto;}
+.container{width:100%;
+			display: inline-block;}
+			
+		
+.c{border: 2px;
+		width: 60%;
+		float: right;
+		display:inline-block ;}
+		
+			      

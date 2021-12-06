@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(#be93c5,
+
+#7bc6cc);
+  height: 100vh;
+  overflow: hidden;
+}
+.center{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  
+  transform: translate(-50%, -50%);
+  width: 500px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+}
+.center h1{
+  text-align: center;
+  padding: 18px 0;
+  border-bottom: 1px solid silver;
+}
+.center form{
+  padding: 0 37px;
+  box-sizing: border-box;
+}
+form .field{
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 17px 0;
+}
+.field input{
+  width: 80%;
+  padding: 0 3px;
+  height: 37px;
+  font-size: 14px;
+  border: none;
+  background: none;
+  outline: none;
+}
+.field label{
+  position: absolute;
+  top: 47%;
+  left: 3px;
+  color: ;
+  transform: translateY(-50%);
+  font-size: 14px;
+  pointer-events: none;
+  transition: .3s;
+}
+.field span::before{
+  content: '';
+  position: absolute;
+  top: 37px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #2691d9;
+  transition: .3s;
+}
+.field input:focus ~ label,
+.field input:valid ~ label{
+  top: -5px;
+  color: red;
+}
+.field input:focus ~ span::before,
+.field input:valid ~ span::before{
+  width: 100%;
+}
+.log{
+  margin: 2px 0 18px 3px;
+  color: #a6a6a6;
+  cursor: pointer;
+}
+.log:hover{
+  text-decoration: underline;
+}
+input[type="submit"]{
+	font-weight: 400;
+  width: 100%;
+  height: 47px;
+  border: 1px solid;
+  cursor: pointer;
+  background: steelblue;
+  border-radius: 23px;
+  font-size: 14px;
+  color: #e9f4fb;
+ 
+ 
+}
+input[type="submit"]:hover{
+  transition: .3s;
+}
+.reg{
+	font-size: 14px;
+  margin: 30px 0;
+  color: #666666;
+  text-align: center;
+}
+.reg a{
+	text-decoration: none;
+  color: #2691d9;
+
+}
+.reg a:hover{
+  text-decoration: underline;
+}

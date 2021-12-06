@@ -15,7 +15,72 @@
                                             x.className = "topnav";
                                         }
                                     }
-        </script>      
+        </script>   
+		<script>
+	 function swap1() {
+            document.getElementById('mainImg').src = "images/pic01.JPG";
+        }
+
+        function swap2() {
+            document.getElementById('mainImg').src = "images/pic02.JPG";
+        }
+
+        function swap3() {
+            document.getElementById('mainImg').src = "images/pic03.JPG";
+        }
+
+        function swap4() {
+            document.getElementById('mainImg').src = "images/pic04.JPG";
+        }
+
+        
+
+
+        function swap(imgnum) {
+            if (imgnum == 1) {
+                document.getElementById('mainImg').src = "images/pic01.JPG";
+            } else if (imgnum == 2) {
+                document.getElementById('mainImg').src = "images/pic02.JPG";
+            } else if (imgnum == 3) {
+                document.getElementById('mainImg').src = "images/pic03.JPG";
+            } else if (imgnum == 4) {
+                document.getElementById('mainImg').src = "images/pic04.JPG";
+            } 
+        }
+
+        imgnum = 1;
+
+        function next() {
+            if (imgnum == 4) {
+                imgnum = 1;
+            } else {
+                imgnum++;
+            }
+
+            swap(imgnum);
+
+        }
+
+        function previous() {
+            if (imgnum == 1) {
+                imgnum = 4;
+            } else {
+                imgnum--;
+            }
+
+            swap(imgnum);
+        }
+
+
+        function swapNew(num) {
+            document.getElementById('mainImg').src = "images/pic0" + num + ".JPG";
+
+            imgnum = num;
+        }
+
+    </script>
+
+
                     
                         
                             
@@ -57,31 +122,31 @@
                 background: white;
             }
 			
-			.module-card2 {
+			 .module-card2 {
                 box-shadow: 0 0 1em #000019;
                 padding: 1em;
                 background: white;
             }
 			
-			.module-card3 {
+			 .module-card3 {
                 box-shadow: 0 0 1em #000019;
                 padding: 1em;
                 background: white;
             }
 			
-			.module-card4 {
+			 .module-card4 {
                 box-shadow: 0 0 1em #000019;
                 padding: 1em;
                 background: white;
             }
 			
-			.module-card5 {
+			 .module-card5 {
                 box-shadow: 0 0 1em #000019;
                 padding: 1em;
                 background: white;
             }
 			
-			.module-card6 {
+			 .module-card6 {
                 box-shadow: 0 0 1em #000019;
                 padding: 1em;
                 background: white;
@@ -111,8 +176,20 @@
 }
 			
 
-            
-} 
+            .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   hight: 50vh;
+   background : linear-gradient(#eecda3,
+
+#ef629f);
+   color: white;
+   text-align: center;
+}
+
+
 
 
              *{
@@ -212,19 +289,6 @@ a.active,a:hover{
   }
 } 
 
-.footer {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background : linear-gradient(
-#3a6186,
-
-#89253e);
-   color: white;
-   text-align: center;
-}
-
 #clock {                        
   font: bold 24px sans-serif;   
   background: #ddf;             
@@ -233,8 +297,7 @@ a.active,a:hover{
   border-radius: 10px;          
 }
 
-
-           @media only screen and (min-width: 600px) 
+            @media only screen and (min-width: 600px) 
             {
 
                     .grid-container {
@@ -293,18 +356,22 @@ setInterval(displayTime, 1000);  // And then update it every second.
       <label for="check" class="c2">
         <i class="fas fa-bars"></i>
       </label>
-      <label class="title">Healthy Lifestyle!!</label>
+      <label class="title">healthy Lifestyle!!</label>
       <ul>
         <li><a class="active"  href="#">Home</a></li>
-        <li><a href="recipes.html">recipes</a></li>
-        <li><a href="contactus.html">Contact</a></li>
-        <li><a href="#">Feedback</a></li>
-		 <li><a  href="login.html">login</a></li>
+        <li><a href="recipes1.html">recipes</a></li>
+        <li><a href="add.html">Add</a></li>
+		<li><a href="delete.html">Delete</a></li>
+        <li><a href="BMI.html">BMI</a></li>
+		 <li><a  href="log1.html">login</a></li>
 		
       </ul>
     </nav>
 	
   </header>
+  <p><img src="images/pic01.jpg"  width="100%" height="600"  id="mainImg"></p>
+
+		<p><a href="javascript:swapNew(1);">Photo 1</a>  <a href="javascript:swapNew(2);">Photo 2</a>  <a href="javascript:swapNew(3);">Photo 3</a>  <a href="javascript:swapNew(4);">Photo 4</a></p> 
    
 <body>
          
@@ -375,8 +442,10 @@ setInterval(displayTime, 1000);  // And then update it every second.
     </body>
 	<footer class="footer">
 	
-		<p>KNumber: K00259004
-		College Email: K00259004@student.lit.ie</p>
+		<p>&copy;
+		<br>KNumber: K00259004
+		College Email: K00259004@student.lit.ie
+		</p>
 	</footer>
 
 </html>

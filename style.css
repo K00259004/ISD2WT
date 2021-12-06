@@ -1,0 +1,122 @@
+#forms{display: block;
+			margin: 20% auto;
+			width: 50%;
+			background-color:#F0FFFF; }
+			#field p{font-style: italic;
+			color:#4B0082;}
+			#field li{font-style: italic;
+			color: #4B0082;}
+			#field h1{text-align: center;
+			color: #00CED1;}
+			
+		label
+ {   	cursor: pointer}
+
+label:focus-within 
+{    
+	color: red;
+}
+
+input[type=text]:hover,
+input[type=email]:hover,
+input[type=password]:hover {   
+      border-color: lightblue;    
+	box-sizing: border-box;   
+	 display: inline-block;
+}  
+		
+	 .topnav {
+          background-color: #A9A9A9;
+          overflow: hidden;
+        }
+
+                    /* Style the links inside the navigation bar */
+        .topnav a {
+          float: left;
+          display: block;
+          color: #f2f2f2;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+
+
+          /* Change the color of links on hover */
+        .topnav a:hover {
+          background-color: #F0FFFF;
+          color: black;
+        }
+
+      
+        .topnav a.active {
+          background-color: #7FFFD4;
+          color: white;
+        }   
+
+
+
+       
+        .topnav .icon {
+          display: none;
+        }
+
+
+        @media screen and (max-width: 600px) 
+        {
+            .topnav a:not(:first-child) {display: none;}
+            .topnav a.icon {
+            float: right;
+            display: block;
+                            }
+        }
+
+
+             @media screen and (max-width: 600px) 
+             {
+                  .topnav.responsive {position: relative;}
+                  .topnav.responsive a.icon {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                  }
+                  .topnav.responsive a {
+                    float: none;
+                    display: block;
+                    text-align: left;
+                  }
+            }           
+
+	
+.grid-container{width: 100%; margin: auto; display: grid;
+				grid-template-columns: auto;}
+.container{width:100%;
+			display: inline-block;}
+			
+		
+.c{border: 2px;
+		width: 60%;
+		float: right;
+		display:inline-block ;}
+		
+footer{display: flex;
+				padding: 16px;
+				color: #fff;
+				background-color: #011c39;}
+@media screen and (min-width: 768px){
+				.grid-container { 
+                 grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6% ;}
+				 .container{grid-column: 1/7;}
+				footer{grid-column: 1/7;}
+				    .footer-container{grid-template-columns: auto auto auto;}
+			}
+			
+			@media screen and (min-width: 992px){
+				.grid-container { 
+                     grid-template-columns:8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8%; }
+				.container{grid-column: 1/13;}
+				 footer{grid-column: 1/13;}
+					.footer-container{grid-template-columns: auto auto auto;}  
+					
+					
+			}

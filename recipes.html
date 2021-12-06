@@ -57,6 +57,7 @@
                 background: white;
             }
 			
+			
 			.module-card2 {
                 box-shadow: 0 0 1em #000019;
                 padding: 1em;
@@ -111,8 +112,15 @@
 }
 			
 
-            
+            footer { 
+	padding: 15px 30px;
+    background-color: steelblue;
 } 
+footer p {
+	text-align: center;
+    font-size: 85%;
+    color: black;    
+}
 
 
              *{
@@ -211,30 +219,20 @@ a.active,a:hover{
     left: 0;
   }
 } 
-
 .footer {
    position: fixed;
    left: 0;
    bottom: 0;
    width: 100%;
-   background : linear-gradient(
-#3a6186,
+   background : linear-gradient(#eecda3,
 
-#89253e);
+#ef629f);
    color: white;
    text-align: center;
 }
 
-#clock {                        
-  font: bold 24px sans-serif;   
-  background: #ddf;             
-  padding: 15px;                
-  border: solid black 2px;      
-  border-radius: 10px;          
-}
 
-
-           @media only screen and (min-width: 600px) 
+            @media only screen and (min-width: 600px) 
             {
 
                     .grid-container {
@@ -250,7 +248,7 @@ a.active,a:hover{
                 
             }
                           
-            }  
+             
 
 
             @media only screen and (min-width: 992px) 
@@ -273,43 +271,27 @@ a.active,a:hover{
 		
 		
 </head>
-<span id="clock"></span>
-<script>
-
-
-// Define a function to display the current time
-function displayTime() {
-    let clock = document.querySelector("#clock"); // Get element with id="clock"
-    let now = new Date();                         // Get current time
-    clock.textContent = now.toLocaleTimeString(); // Display time in the clock
-}
-displayTime()                    // Display the time right away
-setInterval(displayTime, 1000);  // And then update it every second. 
-
-</script> 
-<header>
+	<header>
 	<nav>
       <input type="checkbox" id="c1">
       <label for="check" class="c2">
         <i class="fas fa-bars"></i>
       </label>
-      <label class="title">Healthy Lifestyle!!</label>
+     <a  href="index.html"> <label class="title">Healthy Lifestyle!!</label></a>
       <ul>
-        <li><a class="active"  href="#">Home</a></li>
-        <li><a href="recipes.html">recipes</a></li>
+        <li><a  href="index.html">Home</a></li>
+        <li><a class="active" href="#">recipes</a></li>
         <li><a href="contactus.html">Contact</a></li>
-        <li><a href="#">Feedback</a></li>
-		 <li><a  href="login.html">login</a></li>
+        <li><a  href="feedback.html">Feedback</a></li>
+		 <li><a href="login.html">login</a></li>
 		
       </ul>
     </nav>
-	
-  </header>
-   
+  
 <body>
          
         
-            <h1></h1>
+            <h1>Recipes</h1>
                 
              
                 
@@ -322,7 +304,8 @@ setInterval(displayTime, 1000);  // And then update it every second.
             
           
             <div class="module-card1">
-                <img src="images/p1.jpg" alt="">
+				<a href="https://www.delishknowledge.com/the-best-vegan-stuffing/">
+                <img src="images/r1.jpg" alt=""></a>
                 <h3 class="module-title"></h3>
                 <p> <strong></strong></p>
                 
@@ -331,7 +314,8 @@ setInterval(displayTime, 1000);  // And then update it every second.
             
         
             <div class="module-card2">
-                <img src="images/p2.jpg" alt="">
+				<a href="https://www.delishknowledge.com/vegan-tofu-nuggets/">
+                <img src="images/r2.jpg" alt=""></a>
                 <h3 class="module-title"></h3>
                  <p> <strong> </strong></p>
                 <p class="module-desc"></p>
@@ -340,16 +324,20 @@ setInterval(displayTime, 1000);  // And then update it every second.
             
         
             <div class="module-card3">
-                <img src="images/p3.jpg" alt="">
+				<a href="https://www.delishknowledge.com/lentil-tacos/">
+				<img  src="images/r3.jpg" alt=""></a>
                 <h3 class="module-title"></h3>
                  <p> <strong> </strong></p>
                 <p class="module-desc"> </p>
                
             </div>
             
-            
+            <h2>Just For You</h2>
+			
+			
             <div class="module-card4">
-                <img src="images/p4.jpg" alt="">
+				<a href="https://www.yummly.com/recipe/Keto-Coconut-Flour-Pancakes-2682353">
+                <img src="images/r4.jpg" alt=""></a>
                 <h3 class="module-title"> </h3>
                  <p> <strong> </strong></p>
                 <p class="module-desc"> </p>
@@ -358,7 +346,8 @@ setInterval(displayTime, 1000);  // And then update it every second.
             
            
             <div class="module-card5">
-                <img src="images/p5.jpg" alt="">
+				<a href="https://www.yummly.com/recipe/Voodoo-Pasta-2542552">
+                <img src="images/r5.jpg" alt=""></a>
                 <h3 class="module-title"> </h3>
                 <p> <strong> </strong></p>
                 <p class="module-desc"> </p>
@@ -366,7 +355,8 @@ setInterval(displayTime, 1000);  // And then update it every second.
             
            
             <div class="module-card6">
-                <img src="images/p6.jpg" alt="">
+				<a href="https://www.yummly.com/recipe/Cajun-Red-Beans-and-Rice-9005413">
+                <img src="images/r6.jpg" alt=""></a>
                 <h3 class="module-title"></h3>
                 <p> <strong> </strong></p>
                 <p class="module-desc"> </p>
@@ -375,8 +365,7 @@ setInterval(displayTime, 1000);  // And then update it every second.
     </body>
 	<footer class="footer">
 	
-		<p>KNumber: K00259004
-		College Email: K00259004@student.lit.ie</p>
+		<p>&copy; </p>
 	</footer>
 
 </html>
